@@ -40,7 +40,7 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
 1. Press Start > Write `environment` > Click `Edit the system variables environment`
 2. Click Environment Variables
 3. Under System variables, click New
-    - Variable Name = ython
+    - Variable Name = python
     - Variable Value = C:\Users\Ivan\AppData\Local\Programs\Python\Python310\
 4. Ok > Ok
 
