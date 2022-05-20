@@ -36,7 +36,6 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
 
 **Prerequisites:**
 - Python
-- The path to `node.exe`, usually `C:\Program Files\nodejs`
 
 1. Press Start > Write `environment` > Click `Edit the system variables environment`
 2. Click Environment Variables
