@@ -52,4 +52,5 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
 - Upgraded current python installation: `py -3 -m pip install --upgrade pip`
 
 ### Section 3: Python Object and Data Structure Basics
-- 
+- When to choose a list or dictionary?
+    - Dictionary is OK when, for examply, quickly wanting a value without needing to know its exact location--cons is that can't be sorted, sliced.
