@@ -64,5 +64,3 @@ for num in range(0,101):
 st = 'Create a list of the first letters of every word in this string'
 mylist = [letter[0] for letter in st.split()]
 print(mylist)
-
-#Method 2 - Instructor
