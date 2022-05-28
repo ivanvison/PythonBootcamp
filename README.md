@@ -59,3 +59,7 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
 - Logical operators - Chain operators
     - and or not
     - Ex: 1 < 2 and 2 < 3
+
+### Section 6: Methods and Functions
+- *args to pass N values into a function in a tuple format
+- **kwargs (keywords arguments) to create a dictionary based on the values sent to a function
