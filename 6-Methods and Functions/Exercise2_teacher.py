@@ -1,5 +1,3 @@
-# Please note that all of these solutions were written by me. Teacher's solutions I reviewed them in the original code and compared.
-
 import os
 from pyparsing import Or
 os.system('cls')
