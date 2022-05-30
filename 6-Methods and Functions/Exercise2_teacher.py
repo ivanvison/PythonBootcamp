@@ -1,5 +1,4 @@
 # Please note that all of these solutions were written by me. Teacher's solutions I reviewed them in the original code and compared.
-# @ Exercise2_teacher.py
 
 import os
 from pyparsing import Or
@@ -13,15 +12,9 @@ os.system('cls')
 
 def lesser_of_two(num1,num2):
     if (num1 % 2 == 0) and (num2 % 2 == 0):
-        if num1 < num2:
-            print(num1)
-        else:
-            print(num2)
+        return min(num1,num2)
     else:
-        if num1 > num2:
-            print(num1)
-        else:
-            print(num2)
+        return max(num1,num2)
 
 lesser_of_two(9,5)
 
@@ -31,10 +24,7 @@ print('------------------------------')
 def animal_crackers(str1):
     words = str1.split()
 
-    if words[0][0] == words[1][0]:
-        return True
-    else:
-        return False
+    return words[0][0] == words[1][0]
 
 print(animal_crackers('Aguila Cat'))
 
@@ -43,10 +33,7 @@ print('------------------------------')
 # MAKES TWENTY: Given two integers, return True if the sum of the integers is 20
 #  or if one of the integers is 20. If not, return False
 def makes_twenty(num1, num2):
-    if (num1 + num2 == 20) or (num1 == 20) or (num2 == 20):
-        return True
-    else:
-        return False
+    return (num1 + num2 == 20) or (num1 == 20) or (num2 == 20)
 
 print(makes_twenty(5,5))
 
@@ -56,11 +43,10 @@ print('------------------------------')
 
 # OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
 def old_macdonald(name):
-    temp = list(name)
-    temp[0] = temp[0].upper()
-    temp[3] = temp[3].upper()
-    name = "".join(temp)
-    return name
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return 'Name is too short!'
 
 print(old_macdonald('macdonald'))
 
@@ -68,10 +54,7 @@ print('------------------------------')
 
 # MASTER YODA: Given a sentence, return a sentence with the words reversed
 def master_yoda(str):
-    temp = str.split()
-    temp.reverse()
-    temp = " ".join(temp)
-    return temp
+    return ' '.join(str.split()[::-1])
 
 print(master_yoda('I am home'))
 print(master_yoda('Benjamin Vison Leon'))
@@ -80,27 +63,21 @@ print('------------------------------')
 
 # ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
 def almost_there(num):
-    if (num >=90 and num <= 110) or (num >=190 and num <= 210):
-        return True
-    else:
-        return False
+    return ((abs(100 - num) <= 10) or (abs(200 - num) <= 10))
 
 print(almost_there(111))
 
 print('------------------------------')
 
-# LEVEL 2
-
 # FIND 33: Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
-def has_33(numlist):
-    elements = len(numlist)
-    # print(elements)
-    count = 0
-    for i in numlist:
-        if (i == 3) and (count <= elements-1):
-            if (numlist[count+1] == 3):
-                return True
-        count += 1 
+def has_33(nums):
+    for i in range(0, len(nums)-1):
+      
+        #nicer looking alternative in commented code
+        #if nums[i] == 3 and nums[i+1] == 3:
+    
+        if nums[i:i+2] == [3,3]:
+            return True  
     
     return False
 
@@ -112,15 +89,10 @@ print('------------------------------')
 
 # PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
 def paper_doll(str):
-    temp = list(str)
-    print(temp)
-    i = 0
-    for letter in temp:
-        temp[i] = 3*(letter)
-        i += 1
-
-    str = "".join(temp)
-    return str
+    result = ''
+    for char in str:
+        result += char * 3
+    return result
 
 print(paper_doll('Hello'))
 
@@ -130,17 +102,11 @@ print('------------------------------')
 # If their sum exceeds 21 and there's an eleven, reduce the total sum by 10. Finally, if the sum
 # (even after adjustment) exceeds 21, return 'BUST'
 def blackjack(a,b,c):
-    if (a <= 0 or a > 11) or (b <= 0 or b > 11) or (c <= 0 or c > 11):
-        return 'Please check Numbers.'
-
-    sum = a+b+c
-    if (sum <= 21):
-        return sum
+    if sum((a,b,c)) <= 21:
+        return sum((a,b,c))
+    elif sum((a,b,c)) > 21 and 11 in (a,b,c):
+        return sum((a,b,c)) - 10
     else:
-        if (a == 11 or b == 11 or c == 11):
-            sum = sum - 10
-            if (sum <= 21):
-                return sum                
         return 'BUST'
 
 print(blackjack(9,11,9))
@@ -151,7 +117,32 @@ print('------------------------------')
 # starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9).
 # Return 0 for no numbers.
 def summer_69(arr):
-    pass
+    total = 0
+    add = True
+    for num in arr:
+        while add:
+            if num != 6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+    return total
+
 
 print(summer_69([4, 5, 6, 7, 8, 9]))
 
+print('------------------------------')
+
+def print_big(letter):
+    patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
+    alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+    for pattern in alphabet[letter.upper()]:
+        print(patterns[pattern])
+
+print_big('a')
