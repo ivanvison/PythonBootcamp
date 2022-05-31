@@ -29,6 +29,7 @@ def greet():
 
 greet()
 
+#DANGEROUS PATH! safer to retun the object and reassign 
 x = 50
 def func():
     global x
