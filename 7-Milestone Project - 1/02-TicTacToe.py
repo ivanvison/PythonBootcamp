@@ -13,7 +13,6 @@ os.system('cls')
 # where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3 board representation.
 
 def display_board(board):
-    print('\n\n')
     print(board[7]+'|'+board[8]+'|'+board[9])
     print('-|-|-')
     print(board[4]+'|'+board[5]+'|'+board[6])
@@ -96,7 +95,7 @@ def flip_coin(player1_name,player2_name):
 
 
 # Step 7: Write a function that checks if the board is full and returns a boolean value.
-# True if full, False otherwise.
+# True if full, False otherwise.``
 
 
 # Step 8: Write a function that asks for a player's next position (as a number 1-9) and then uses
@@ -110,7 +109,7 @@ def flip_coin(player1_name,player2_name):
 
 print('Welcome to Tic Tac Toe!')
 
-board = ['#','X','X','X','O','O','O','O','O','O']
+board = ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ']
 display_board(board)
 player1_name,player1_mark,player2_name,player2_mark = player_input()
 starter = flip_coin(player1_name,player2_name)
