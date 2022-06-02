@@ -46,14 +46,14 @@ def flip_coin(player1_name,player2_name):
     print("\nLet's flip a coin to see who will start!" )
     coin = ['H','T']
     coin_result = ''
-    p1_choice = 'wrong'
+    p1_choice = ''
 
-    while p1_choice == 'wrong':
+    while p1_choice == '':
         p1_choice = input(f'{player1_name}, please select Heads (H) or Tails (T): ').upper()
         
         if p1_choice != 'H' and p1_choice != 'T':
             print("This side of the coin doesn't exists!. Please choose Heads (H) or Tails (T)")
-            p1_choice = 'wrong'
+            p1_choice = ''
 
     coin_result = random.choice(coin)
     print(f"Result of the coin: {coin_result}")
@@ -124,7 +124,7 @@ def win_check(board, p1_mark, p2_mark,game_plays):
     
     if result == '' and game_plays == 9:
         print("\nThis is a TIE!")
-        result = 'None'
+        result = 'TIE'
     elif result != '':
         print(f"\nWinner is {result}")
 
