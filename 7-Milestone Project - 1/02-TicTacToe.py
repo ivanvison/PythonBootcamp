@@ -100,37 +100,37 @@ def place_marker(player_name, player_mark,board):
 # Step 4: Write a function that takes in a board and a mark (X or O) and then checks
 # to see if that mark has won.
 def win_check(board, p1_mark, p2_mark,game_plays):
-    if (board[1] == p1_mark and board[2] == p1_mark and board[3] == p1_mark):
+    if (board[1] == board[2] == board[3] == p1_mark):
         result = 'P1'
-    elif (board[4] == p1_mark and board[5] == p1_mark and board[6] == p1_mark):
+    elif (board[4] == board[5] == board[6] == p1_mark):
         result = 'P1'
-    elif (board[7] == p1_mark and board[8] == p1_mark and board[9] == p1_mark):
+    elif (board[7] == board[8] == board[9] == p1_mark):
         result = 'P1'
-    elif (board[1] == p1_mark and board[4] == p1_mark and board[7] == p1_mark):
+    elif (board[1] == board[4] == board[7] == p1_mark):
         result = 'P1'
-    elif (board[2] == p1_mark and board[5] == p1_mark and board[8] == p1_mark):
+    elif (board[2] == board[5] == board[8] == p1_mark):
         result = 'P1'
-    elif (board[3] == p1_mark and board[6] == p1_mark and board[9] == p1_mark):
+    elif (board[3] == board[6] == board[9] == p1_mark):
         result = 'P1'
-    elif (board[1] == p1_mark and board[5] == p1_mark and board[9] == p1_mark):
+    elif (board[1] == board[5] == board[9] == p1_mark):
         result = 'P1'
-    elif (board[3] == p1_mark and board[5] == p1_mark and board[7] == p1_mark):
+    elif (board[3] == board[5] == board[7] == p1_mark):
         result = 'P1'
-    elif (board[1] == p2_mark and board[2] == p2_mark and board[3] == p2_mark):
+    elif (board[1] == board[2] == board[3] == p2_mark):
         result = 'P2'
-    elif (board[4] == p2_mark and board[5] == p2_mark and board[6] == p2_mark):
+    elif (board[4] == board[5] == board[6] == p2_mark):
         result = 'P2'
-    elif (board[7] == p2_mark and board[8] == p2_mark and board[9] == p2_mark):
+    elif (board[7] == board[8] == board[9] == p2_mark):
         result = 'P2'
-    elif (board[1] == p2_mark and board[4] == p2_mark and board[7] == p2_mark):
+    elif (board[1] == board[4] == board[7] == p2_mark):
         result = 'P2'
-    elif (board[2] == p2_mark and board[5] == p2_mark and board[8] == p2_mark):
+    elif (board[2] == board[5] == board[8] == p2_mark):
         result = 'P2'
-    elif (board[3] == p2_mark and board[6] == p2_mark and board[9] == p2_mark):
+    elif (board[3] == board[6] == board[9] == p2_mark):
         result = 'P2'
-    elif (board[1] == p2_mark and board[5] == p2_mark and board[9] == p2_mark):
+    elif (board[1] == board[5] == board[9] == p2_mark):
         result = 'P2'
-    elif (board[3] == p2_mark and board[5] == p2_mark and board[7] == p2_mark):
+    elif (board[3] == board[5] == board[7] == p2_mark):
         result = 'P2'
     else:
         result = ''
