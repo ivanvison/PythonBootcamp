@@ -1,17 +1,10 @@
-#2 players should be able to play the game
-# numpad
-#7 8 9
-#4 5 6
-#1 2 3
-# clear output
+# Original TIC TAC TOE test, applied some edits. 
 
 import random
 import os
 os.system('cls')
 
-# Step 1: Write a function that can print out a board. Set up your board as a list,
-# where each index 1-9 corresponds with a number on a number pad, so you get a 3 by 3 board representation.
-
+# Display board
 def display_board(board):
     print(board[1]+'|'+board[2]+'|'+board[3])
     print('-|-|-')
@@ -20,9 +13,7 @@ def display_board(board):
     print(board[7]+'|'+board[8]+'|'+board[9])
 
 
-# Step 2: Write a function that can take in a player input and assign their marker as 'X' or 'O'.
-# Think about using while loops to continually ask until you get a correct answer.
-# IV Note: My Addition, ask the name to provide personalization
+# Function that handles player's names and marks
 def player_input():
     player1_name = ''
     player2_name = ''
@@ -50,9 +41,7 @@ def player_input():
 
     return (player1_name,player1_mark,player2_name,player2_mark)
 
-# PERSONAL ADDITION - Flip a coin to determine who will start
-# (This is a personal addition to the test. Not originally in the requirements)
-# Please note that Step 5 had a similar request than this.
+# Flip a coin to determine who goes first. 
 def flip_coin(player1_name,player2_name):
     print("\nLet's flip a coin to see who will start!" )
     coin = ['H','T']
@@ -79,13 +68,12 @@ def flip_coin(player1_name,player2_name):
     return starter
 
 
-# Step 3: Write a function that takes in the board list object, a marker ('X' or 'O'),
-# and a desired position (number 1-9) and assigns it to the board.
+# Place Marker function takes name, mark and the board to allow the user enter a position and update the board
 def place_marker(player_name, player_mark,board):
     position = 0
 
     while position == 0:
-        position = int(input(f'\n{player_name}, please enter a position to place your {player_mark} from 1-9: '))
+        position = int(input(f"\n{player_name}, please enter a position to place your '{player_mark}' from 1-9: "))
         if position not in range(1,10):
             print("Please select a correct number (1-9)")
             position = 0
@@ -97,8 +85,7 @@ def place_marker(player_name, player_mark,board):
             return board
 
 
-# Step 4: Write a function that takes in a board and a mark (X or O) and then checks
-# to see if that mark has won.
+# Win Check will go through the board looking for a winner or a tie. 
 def win_check(board, p1_mark, p2_mark,game_plays):
     if (board[1] == board[2] == board[3] == p1_mark): 
         result = 'P1'
@@ -143,23 +130,7 @@ def win_check(board, p1_mark, p2_mark,game_plays):
 
     return result
 
-# Step 5: Write a function that uses the random module to randomly decide which player goes first.
-# You may want to lookup random.randint() Return a string of which player went first.
-
-
-# Step 6: Write a function that returns a boolean indicating whether a space on the board is freely available.
-
-
-# Step 7: Write a function that checks if the board is full and returns a boolean value.
-# True if full, False otherwise.``
-
-
-# Step 8: Write a function that asks for a player's next position (as a number 1-9) and then uses
-# the function from step 6 to check if it's a free position. If it is, then return the position for later use.
-
-
-# Step 9: Write a function that asks the player if they want to play again and returns a boolean
-# True if they do want to play again.
+# Replay function asks users if they want to continue playing or not.
 def replay():
     choice = ''
     
@@ -170,15 +141,17 @@ def replay():
             print("Please select a correct option - (Y) Yes / (N) No")
             choice = ''
         elif choice == 'Y':
+            print('\n\n')
             return True
         else:
-            return False
+            print(f'\n\nThank you for playing!!! Come back soon!!')
+            return False        
 
-# Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
-
+# Main code. Putting everything together.
 print('Welcome to Tic Tac Toe!')
 game_on = True
 
+# While runs while players want to keep on playing. 
 while game_on == True:
     winner = ''
     game_plays = 0
@@ -187,6 +160,7 @@ while game_on == True:
     player1_name,player1_mark,player2_name,player2_mark = player_input()
     next_play = flip_coin(player1_name,player2_name)
 
+    # Loop in charge of handling next player, counting plays, checking for a winner and replays
     while winner == '':
         if next_play == 'P1':
             board = place_marker(player1_name, player1_mark,board)
@@ -200,10 +174,7 @@ while game_on == True:
         winner = win_check(board,player1_mark,player2_mark,game_plays)
 
     game_on = replay()
-    if game_on == False:
-        print(f'\n\n{player1_name} and {player2_name}, thank you for playing!!! Come back soon!!')
-    else:
-        print('\n\n')
+
 
 
 
