@@ -169,11 +169,10 @@ def replay():
         if choice != 'Y' and choice != 'N':
             print("Please select a correct option - (Y) Yes / (N) No")
             choice = ''
-
-    if choice == 'Y':
-        return True
-    else:
-        return False
+        elif choice == 'Y':
+            return True
+        else:
+            return False
 
 # Step 10: Here comes the hard part! Use while loops and the functions you've made to run the game!
 
