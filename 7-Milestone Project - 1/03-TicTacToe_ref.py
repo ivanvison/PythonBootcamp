@@ -151,7 +151,7 @@ def replay():
 print('Welcome to Tic Tac Toe!')
 game_on = True
 
-# While runs while players want to keep on playing. 
+# Loop runs while players want to keep on playing. 
 while game_on == True:
     winner = ''
     game_plays = 0
