@@ -69,4 +69,40 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
     - G: Global (module) — Names assigned at the top-level of a module file, or declared global in a def within the file.
     - B: Built-in (Python) — Names preassigned in the built-in names module : open, range, SyntaxError,...
 
-### Section 7: Milestone Project - 1
+### Section 8: Object Oriented Programming
+- Allows users to create their own objects.
+- Allows us to create code that is repeatable and organized.
+- Camel Casing for classes
+- Syntax sample:
+- def when is inside of a class is called a method.
+- __init__ is a special type that is always called when creating an instance of the class
+- self keyword connects the method to the instance of the class
+```python
+class NameOfClass():
+
+    def __init__(self, param1, param2):
+        self.param1 = param1
+        self.param2 = param2
+
+    def some_method(self):
+        #perform some action
+        print(self.param1)
+```
+
+### Section 9: Modules and Packages
+- Packages is a collection of modules
+- Modules are scripts that you can call from a different .py files.
+- __init__ identifies a folder that should be a package or subpackage
+- `if __name__=="__main__":` - original file or actual import
+- Code organization
+
+
+### Section 10: Errors and Exception Handling
+- Keywords
+    - try: attempt
+    - except: execute if error
+    - finally: 
+- pylint
+- unittest
+- `pylint myexample.py -r y`
+- PEP 8
