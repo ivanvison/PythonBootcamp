@@ -116,3 +116,19 @@ class NameOfClass():
 - usage of a yield statement
 - range()
 - Memory efficiency
+
+
+### Section 14: Advanced Python Modules
+- Collections (from collections import...)
+    - d = defaultdict(lambda: 0) -- assign default value to dictionary
+    - named tuple
+- OS
+    - os.unlink(path) - delete a file
+    - os.rmdir(path) - deletes a folder
+    - shutil.rmtree(path) - remove all files and folders contained int he path
+    - Better method: send2trash
+- Math and Random
+- Debugger
+- Timeit
+- Regular Expressions
+- Unzipping and Zip
