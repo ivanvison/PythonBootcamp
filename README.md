@@ -15,17 +15,16 @@ Quick note: The trainer (Jose Portilla) uses Anaconda, Jupyter Notebooks. I trie
 - Section 9: Modules and Packages
 - Section 10: Errors and Exception Handling
 - Section 11: Milestone Project - 2
-- Section 12: Empty-Section-Skip
-- Section 13: Python Decorators
-- Section 14: Python Generators
-- Section 15: Advanced Python Modules
-- Section 16: Web-Scraping
-- Section 17: Working-with-Images
-- Section 18: PDFs-and-Spreadsheets
-- Section 19: Emailing-with-Python
-- Section 20: Advanced Python Objects and Data Structures
-- Section 21: Milestone Project - 3
-- Section 22: Bonus Material - Introduction to G
+- Section 12: Python Decorators
+- Section 13: Python Generators
+- Section 14: Advanced Python Modules
+- Section 15: Web-Scraping
+- Section 16: Working-with-Images
+- Section 17: PDFs-and-Spreadsheets
+- Section 18: Emailing-with-Python
+- Section 19: Advanced Python Objects and Data Structures
+- Section 20: Milestone Project - 3
+- Section 21: Bonus Material - Introduction to G
 
 ## Install / Usage Process (My personal setup)
 1. Installed [VS Code](https://code.visualstudio.com).
@@ -106,3 +105,14 @@ class NameOfClass():
 - unittest
 - `pylint myexample.py -r y`
 - PEP 8
+
+### Section 12: Decorators
+- On/Off Switch for functions
+- @ operators is used and located above the function
+- we can pass functions as arguments
+
+### Section 13: Generators
+- Generate a sequence of values over time
+- usage of a yield statement
+- range()
+- Memory efficiency
