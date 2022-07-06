@@ -13,12 +13,12 @@ print(os.getcwd())
 #for item in os.listdir():
 #    print(item)
 
-if 'practice.txt' in os.listdir():
-    shutil.move('practice.txt','C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\15-Advanced Python Modules',)
+#if 'practice.txt' in os.listdir():
+#    shutil.move('practice.txt','C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\14-Advanced Python Modules',)
 
-send2trash.send2trash('C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\15-Advanced Python Modules\\practice.txt')
+#send2trash.send2trash('C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\14-Advanced Python Modules\\practice.txt')
 
-file_path = 'C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\15-Advanced Python Modules\\Example_Top_Level'
+file_path = 'C:\\Users\\Ivan\\Desktop\\Python Path\\BootCamp\\CourseCode\\14-Advanced Python Modules\\Example_Top_Level'
 for folder, sub_folders, files in os.walk(file_path):
     print(f"Currently looking at {folder}")
     print("\n")

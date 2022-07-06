@@ -129,6 +129,22 @@ class NameOfClass():
     - Better method: send2trash
 - Math and Random
 - Debugger
+    - pdb.set_trace()
 - Timeit
 - Regular Expressions
 - Unzipping and Zip
+
+
+### Section 15: Web Scrapping
+- Automate the gathering of data from the web
+- Libraries
+    - pip install requests
+    - pip install lxml
+    - pip install bs4
+- Sample:
+    ```python
+    result = requests.get("http://example.com/")
+    soup = bs4.BeautifulSoup(result.text,"lxml")
+    print(soup.select('p'))
+    ```
+- Return tags. To remove `soup.select('title')[0].getText()`
