@@ -148,3 +148,11 @@ class NameOfClass():
     print(soup.select('p'))
     ```
 - Return tags. To remove `soup.select('title')[0].getText()`
+
+
+### Section 16: Working with images
+- `pip install pillow`
+- Image.open
+- .rotate
+- .save
+- .paste
