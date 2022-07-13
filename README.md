@@ -156,3 +156,13 @@ class NameOfClass():
 - .rotate
 - .save
 - .paste
+
+### Section 17: Working with CSV and PDF
+- Pandas
+- Openpyxl
+- Google Sheet Python API
+- `pip install PyPDF2`
+
+### Section 18: Emails with Python
+- `import smtplib`
+- `import imaplib`
